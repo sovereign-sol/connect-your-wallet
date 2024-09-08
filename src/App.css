@@ -1,0 +1,147 @@
+html {
+  background: #000;
+  color: #fff;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .top-bar #stake-button-root {
+  display: inline-block;
+  }
+
+  .stake-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px; /* Aggiungi spazio sopra il contenitore */
+    }
+
+    @keyframes fading {
+      0% { background-color: #311b92;}
+      50% { background-color: #421f9b;}
+      100% { background-color: #512da8;}
+      }
+
+      @keyframes fire {
+        0% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 140, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.5); }
+        50% { box-shadow: 0 0 20px rgba(255, 69, 0, 0.7), 0 0 30px rgba(255, 140, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.7); }
+        100% { box-shadow: 0 0 10px rgba(255, 69, 0, 0.5), 0 0 20px rgba(255, 140, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.5); }
+        }
+
+.suggested-value-button {
+  display: block;
+  margin-top: 0px;
+  padding: 5px 10px;
+  align-items: flex-end;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  justify-content: center;
+  }
+  
+  .suggested-value-button:hover {
+  background-color: #0056b3;
+}
+
+.stake-button {
+  background-color: #512da8;
+  color: white; /* Colore del testo */
+  border: none;
+  padding: 10px 20px; /* Spaziatura interna */
+  font-size: 16px; /* Dimensione del font */
+  font-weight: bold; /* Testo in grassetto */
+  border-radius: 8px; /* Angoli arrotondati */
+  cursor: pointer; /* Cambia il cursore quando si passa sopra */
+  transition: background-color 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  
+  .stake-button-fading {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: fire 1s infinite alternate;
+  }
+
+  .stake-button:hover {
+  background-color: white;
+  color: #311b92; /* Colore del testo */
+  animation: none
+  }
+  
+  .stake-button:disabled {
+  background-color: #b39ddb;
+  cursor: not-allowed;
+  opacity: 0.6;
+  }  
+
+  .stake-button-image {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px; /* Spazio tra il testo e l'immagine */
+    vertical-align: middle; /* Allinea verticalmente l'immagine con il testo */
+  }
+
+  .stake-button-input {
+    background-color: #512da8; /* Colore di sfondo viola */
+    color: white; /* Colore del testo */
+    border: 2px solid #311b92; /* Bordo viola scuro */
+    padding: 10px; /* Spaziatura interna */
+    font-size: 16px; /* Dimensione del font */
+    font-weight: bold; /* Testo in grassetto */
+    text-align: center;
+    border-radius: 8px; /* Angoli arrotondati */
+    margin-top: 10px;
+    margin-bottom: 1px;
+    outline: none; /* Rimuove il contorno */
+    transition: border-color 0.3s ease; /* Transizione per il cambio di colore del bordo */
+    }
+      
+  .stake-button-input:focus {
+    border-color: #b39ddb; /* Colore del bordo quando l'input è in focus */
+  }
+  
+  .stake-button-input:disabled {
+    background-color: #b39ddb;
+    color: #d1c4e9;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+/* Rimuove i bottoni dello spinbox per Chrome, Safari e altri browser basati su WebKit */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+/* Rimuove i bottoni dello spinbox per Firefox */
+input[type="number"] {
+-moz-appearance: textfield;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
